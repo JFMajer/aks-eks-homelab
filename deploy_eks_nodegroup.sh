@@ -3,7 +3,7 @@
 eksctl create nodegroup \
   --cluster cluster-00 \
   --region eu-north-1 \
-  --name workers-managed \
+  --name workers-00 \
   --node-type t3.large \
   --node-volume-size=21 \
   --managed \

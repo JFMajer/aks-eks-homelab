@@ -1,0 +1,24 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cluster-00
+  region: eu-north-1
+
+vpc:
+  nat:
+    gateway: Single # other options: Disable, Single (default)
+
+nodeGroups:
+  - name: ng-1
+    minSize: 2
+    maxSize: 4
+    volumeSize: 30
+    instanceTypes: ["t3.small", "t3.medium", "t3.large", "m5.large"] # At least one instance type should be specified
+    spot: true
+    iam:
+      withOIDC: true
+      withAddonPolicies:
+        ebs: true
+        fsx: true
+        efs: true
