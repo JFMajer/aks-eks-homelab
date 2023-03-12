@@ -15,7 +15,4 @@ helm install --generate-name prometheus-community/prometheus
 
 eksctl create addon --name aws-ebs-csi-driver --cluster cluster-00 --service-account-role-arn arn:aws:iam::<account_id>:role/AmazonEKS_EBS_CSI_DriverRole --force
 
-
-
-
 eksctl create cluster -f cluster.yaml
