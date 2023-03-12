@@ -9,7 +9,7 @@ vpc:
   nat:
     gateway: Single # other options: Disable, Single (default)
 
-nodeGroups:
+managedNodeGroups:
   - name: ng-1
     minSize: 2
     maxSize: 4
@@ -17,7 +17,6 @@ nodeGroups:
     instanceTypes: ["t3.small", "t3.medium", "t3.large", "m5.large"] # At least one instance type should be specified
     spot: true
     iam:
-      withOIDC: true
       withAddonPolicies:
         ebs: true
         fsx: true
