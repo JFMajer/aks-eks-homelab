@@ -1,7 +1,7 @@
 # aws-eks-homelab
-
+```
 eksctl create cluster -f cluster.yaml
-
+```
 
 # Installing EBS CSI Driver
 
