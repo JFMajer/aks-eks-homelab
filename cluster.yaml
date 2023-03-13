@@ -14,7 +14,7 @@ managedNodeGroups:
     minSize: 2
     maxSize: 4
     volumeSize: 30
-    instanceTypes: ["t3.small", "t3.medium", "t3.large", "m5.large"] # At least one instance type should be specified
+    instanceTypes: ["t3.medium", "t3.large", "m5.large"] # At least one instance type should be specified
     spot: true
     iam:
       withAddonPolicies:
