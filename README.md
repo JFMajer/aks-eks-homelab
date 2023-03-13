@@ -90,7 +90,7 @@ helm install grafana grafana/grafana \
     --namespace grafana \
     --set persistence.storageClassName="gp2" \
     --set persistence.enabled=true \
-    --set adminPassword='EKS!sAWSome' \
+    --set adminPassword='admin123' \
     --values ./grafana/grafana.yaml \
     --set service.type=LoadBalancer
 ```
